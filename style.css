@@ -1,0 +1,28 @@
+:root {
+  --bg-dark: oklch(0.1 0.1 340);
+  --bg: oklch(0.15 0.1 340);
+  --bg-light: oklch(0.2 0.1 340);
+  --text: oklch(0.96 0.1 340);
+  --text-muted: oklch(0.76 0.1 340);
+  --highlight: oklch(0.5 0.2 340);
+  --border: oklch(0.4 0.2 340);
+  --border-muted: oklch(0.3 0.2 340);
+  --primary: oklch(0.76 0.2 340);
+  --secondary: oklch(0.76 0.2 160);
+  --danger: oklch(0.7 0.2 30);
+  --warning: oklch(0.7 0.2 100);
+  --success: oklch(0.7 0.2 160);
+  --info: oklch(0.7 0.2 260);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
