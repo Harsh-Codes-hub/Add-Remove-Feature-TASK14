@@ -1,28 +1,173 @@
 :root {
-  --bg-dark: oklch(0.1 0.1 340);
-  --bg: oklch(0.15 0.1 340);
-  --bg-light: oklch(0.2 0.1 340);
-  --text: oklch(0.96 0.1 340);
-  --text-muted: oklch(0.76 0.1 340);
-  --highlight: oklch(0.5 0.2 340);
-  --border: oklch(0.4 0.2 340);
-  --border-muted: oklch(0.3 0.2 340);
-  --primary: oklch(0.76 0.2 340);
-  --secondary: oklch(0.76 0.2 160);
+  --bg-dark: oklch(0.1 0.1 284);
+  --bg: oklch(0.15 0.1 284);
+  --bg-light: oklch(0.2 0.1 284);
+  --text: oklch(0.96 0.1 284);
+  --text-muted: oklch(0.76 0.1 284);
+  --highlight: oklch(0.5 0.2 284);
+  --border: oklch(0.4 0.2 284);
+  --border-muted: oklch(0.3 0.2 284);
+  --primary: oklch(0.76 0.2 284);
   --danger: oklch(0.7 0.2 30);
-  --warning: oklch(0.7 0.2 100);
   --success: oklch(0.7 0.2 160);
-  --info: oklch(0.7 0.2 260);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+main .container {
+  padding-block: 100px;
+}
+main .container .profile-container {
+  max-width: 600px;
+  width: calc(100% - 100px);
+  height: 450px;
+  margin-inline: auto;
+  border-radius: 26px;
+  min-width: 300px;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-rows: 75% 1fr;
+  overflow: hidden;
+  border: 1px solid var(--border-muted);
+  border-top-color: var(--border);
+  background-image: linear-gradient(to bottom, var(--bg), var(--bg-dark), var(--bg-light));
+  padding: 10px;
+}
+.profile-container .top,
+.profile-container .bottom {
+  width: 100%;
+}
+.profile-container .top {
+  position: relative;
+  z-index: 2;
+}
+.profile-container .top .profile-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--bg);
+  border-top-color: var(--bg-dark);
+  border-left-color: var(--bg-dark);
+  box-shadow: 1px 1px 5px var(--bg);
+}
+.profile-container .top .profile-bg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile-container .bottom {
+  position: relative;
+  z-index: 5;
+}
+.profile-container .bottom .profile-picture {
+  position: absolute;
+  top: -75px;
+  left: 10px;
+  height: 125px;
+  width: 125px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--border-muted);
+  border-left-color: var(--border-muted);
+  box-shadow: 3px 3px 5px var(--border);
+}
+.profile-container .bottom .profile-picture img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile-container .bottom .content-block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  margin-left: 150px;
+  color: var(--primary);
+}
+.profile-container .bottom .content-block h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.profile-container .bottom .content-block #relation {
+  margin-left: 2px;
+}
+.profile-container .bottom .content-block .rel-stranger {
+  opacity: 0.7;
+}
+.profile-container .bottom .content-block .rel-follower {
+  color: var(--text);
+  font-style: normal;
+}
+.profile-container .bottom .content-block .follow {
+  background: var(--bg-dark);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text-muted);
+}
+.profile-container .bottom .content-block .follow i {
+  transition: all 0.3s ease;
+  color: var(--text-muted);
+}
+.profile-container .bottom .content-block .follow:hover {
+  background-color: var(--border);
+  color: var(--text);
+  scale: 1.05;
+}
+.profile-container .bottom .content-block .follow:hover i {
+  color: var(--text);
+}
+.profile-container .bottom .content-block .unfollow {
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+.profile-container .bottom .content-block .unfollow i {
+  color: var(--danger);
+}
+.profile-container .bottom .content-block .unfollow:hover {
+  color: var(--danger);
+  background-color: var(--bg);
+  border: 1px solid var(--danger);
+}
+.profile-container .bottom .content-block .unfollow:hover i {
+  color: var(--danger);
 }/*# sourceMappingURL=style.css.map */
