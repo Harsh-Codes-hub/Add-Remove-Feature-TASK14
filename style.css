@@ -36,9 +36,13 @@ body {
 main {
   width: 100%;
   position: relative;
+  height: 100%;
 }
 main .container {
-  padding-block: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 main .container .profile-container {
   max-width: 600px;
@@ -91,9 +95,9 @@ main .container .profile-container {
 .profile-container .bottom .profile-picture {
   position: absolute;
   top: -75px;
-  left: 10px;
-  height: 125px;
-  width: 125px;
+  left: 5px;
+  height: 115px;
+  aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 50%;
   border: 2px solid var(--border);
@@ -115,7 +119,7 @@ main .container .profile-container {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  margin-left: 150px;
+  margin-left: 120px;
   color: var(--primary);
 }
 .profile-container .bottom .content-block h1 {
@@ -136,13 +140,14 @@ main .container .profile-container {
   background: var(--bg-dark);
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 20px;
   border-radius: 10px;
   border: 1px solid var(--border);
   font-weight: 500;
   transition: all 0.3s ease;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 .profile-container .bottom .content-block .follow i {
   transition: all 0.3s ease;
